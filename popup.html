@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LingoLens</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/icon48.png" alt="">
+    <div>
+      <h1 data-i18n="extensionName"></h1>
+      <p id="stateText"></p>
+    </div>
+    <label class="switch" title="">
+      <input id="enabled" type="checkbox">
+      <span></span>
+    </label>
+  </header>
+
+  <main>
+    <label class="field">
+      <span data-i18n="actionModeLabel"></span>
+      <select id="actionMode">
+        <option value="translate" data-i18n="actionModeTranslate"></option>
+        <option value="summary" data-i18n="actionModeSummary"></option>
+        <option value="explain" data-i18n="actionModeExplain"></option>
+        <option value="explain_context" data-i18n="actionModeExplainContext"></option>
+        <option value="poem" data-i18n="actionModePoem"></option>
+        <option value="language_analysis" data-i18n="actionModeLanguageAnalysis"></option>
+        <option value="proofread" data-i18n="actionModeProofread"></option>
+      </select>
+    </label>
+
+    <label class="field inlineToggle" id="hoverField">
+      <span data-i18n="hoverEnabled"></span>
+      <input id="hoverEnabled" type="checkbox">
+    </label>
+
+    <label class="field" id="engineField">
+      <span data-i18n="engineLabel"></span>
+      <select id="engine">
+        <option value="deepl" data-i18n="engineDeepL"></option>
+        <option value="gemini" data-i18n="engineGemini"></option>
+        <option value="google" data-i18n="engineGoogle"></option>
+      </select>
+    </label>
+
+    <label class="field" id="qualityField">
+      <span data-i18n="translationQualityLabel"></span>
+      <select id="translationQuality">
+        <option value="fast" data-i18n="translationQualityFast"></option>
+        <option value="balanced" data-i18n="translationQualityBalanced"></option>
+        <option value="high" data-i18n="translationQualityHigh"></option>
+        <option value="professional" data-i18n="translationQualityProfessional"></option>
+        <option value="custom" data-i18n="translationQualityCustom"></option>
+      </select>
+    </label>
+
+    <div class="grid2 languageGrid">
+      <label class="field languagePicker">
+        <span data-i18n="sourceLanguage"></span>
+        <select id="sourceCategory" class="categorySelect"></select>
+        <select id="sourceLanguage"></select>
+      </label>
+      <label class="field languagePicker">
+        <span id="targetLanguageLabel" data-i18n="targetLanguage"></span>
+        <select id="targetCategory" class="categorySelect"></select>
+        <select id="targetLanguage"></select>
+      </label>
+    </div>
+
+    <div class="grid2">
+      <label class="field hidden" id="sourceEraField">
+        <span data-i18n="sourceEraLabel"></span>
+        <select id="sourceHistoricalEra"></select>
+      </label>
+      <label class="field hidden" id="targetEraField">
+        <span data-i18n="targetEraLabel"></span>
+        <select id="targetHistoricalEra"></select>
+      </label>
+    </div>
+
+    <div id="sameLanguageWarning" class="warning hidden" data-i18n="sameLanguageWarning"></div>
+    <div id="apiWarning" class="warning hidden"></div>
+    <div id="geminiModelWarning" class="warning hidden"></div>
+    <div id="pinSuggestion" class="warning hidden" data-i18n="pinSuggestion"></div>
+
+    <div class="shortcutRow">
+      <div>
+        <span class="label" data-i18n="shortcutLabel"></span>
+        <strong id="shortcutValue">—</strong>
+      </div>
+      <button id="shortcutBtn" class="ghost" data-i18n="changeShortcut"></button>
+    </div>
+  </main>
+
+  <footer>
+    <button id="optionsBtn" class="primary" data-i18n="openSettings"></button>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

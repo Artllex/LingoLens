@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LingoLens</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <img src="icons/icon64.png" alt="">
+        <div>
+          <h1 data-i18n="extensionName"></h1>
+          <p data-i18n="settingsSubtitle"></p>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="resetBtn" class="secondary" data-i18n="resetDefaults"></button>
+        <button id="saveBtn" class="primary" data-i18n="saveSettings"></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2 data-i18n="generalSection"></h2>
+        <div class="settingRow">
+          <div><strong data-i18n="enabledLabel"></strong><p data-i18n="enabledHelp"></p></div>
+          <label class="switch"><input id="enabled" type="checkbox"><span></span></label>
+        </div>
+        <div class="settingRow languageRow">
+          <div><strong data-i18n="uiLanguageLabel"></strong><p data-i18n="uiLanguageHelp"></p></div>
+          <select id="uiLanguage" class="compactSelect">
+            <option value="pl" data-i18n="uiLanguagePolish"></option>
+            <option value="en" data-i18n="uiLanguageEnglish"></option>
+          </select>
+        </div>
+        <div class="settingRow">
+          <div><strong data-i18n="hoverEnabled"></strong><p data-i18n="hoverEnabledHelp"></p></div>
+          <label class="switch"><input id="hoverEnabled" type="checkbox"><span></span></label>
+        </div>
+        <div class="settingRow">
+          <div><strong data-i18n="selectionEnabled"></strong><p data-i18n="selectionEnabledHelp"></p></div>
+          <label class="switch"><input id="selectionEnabled" type="checkbox"><span></span></label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="translationSection"></h2>
+        <div class="formGrid">
+          <label><span data-i18n="actionModeLabel"></span><select id="actionMode">
+            <option value="translate" data-i18n="actionModeTranslate"></option>
+            <option value="summary" data-i18n="actionModeSummary"></option>
+            <option value="explain" data-i18n="actionModeExplain"></option>
+            <option value="explain_context" data-i18n="actionModeExplainContext"></option>
+            <option value="poem" data-i18n="actionModePoem"></option>
+            <option value="language_analysis" data-i18n="actionModeLanguageAnalysis"></option>
+            <option value="proofread" data-i18n="actionModeProofread"></option>
+          </select></label>
+          <label id="engineOptionField"><span data-i18n="engineLabel"></span><select id="engine">
+            <option value="deepl" data-i18n="engineDeepL"></option>
+            <option value="gemini" data-i18n="engineGemini"></option>
+            <option value="google" data-i18n="engineGoogle"></option>
+              </select></label>
+          <label id="qualityOptionField"><span data-i18n="translationQualityLabel"></span><select id="translationQuality">
+            <option value="fast" data-i18n="translationQualityFast"></option>
+            <option value="balanced" data-i18n="translationQualityBalanced"></option>
+            <option value="high" data-i18n="translationQualityHigh"></option>
+            <option value="professional" data-i18n="translationQualityProfessional"></option>
+            <option value="custom" data-i18n="translationQualityCustom"></option>
+              </select></label>
+          <label class="languagePicker"><span data-i18n="sourceLanguage"></span><select id="sourceCategory" class="categorySelect"></select><select id="sourceLanguage"></select></label>
+          <label class="languagePicker"><span id="targetLanguageOptionsLabel" data-i18n="targetLanguage"></span><select id="targetCategory" class="categorySelect"></select><select id="targetLanguage"></select></label>
+          <label id="sourceEraOptionField" class="hidden"><span data-i18n="sourceEraLabel"></span><select id="sourceHistoricalEra"></select></label>
+          <label id="targetEraOptionField" class="hidden"><span data-i18n="targetEraLabel"></span><select id="targetHistoricalEra"></select></label>
+        </div>
+        <p id="qualityHelp" class="sectionIntro qualityHelp" data-i18n="translationQualityHelp"></p>
+        <p id="summaryModeHelp" class="sectionIntro hidden" data-i18n="summaryModeHelp"></p>
+        <p id="explainModeHelp" class="sectionIntro hidden" data-i18n="explainModeHelp"></p>
+        <p id="explainContextModeHelp" class="sectionIntro hidden" data-i18n="explainContextModeHelp"></p>
+        <p id="poemModeHelp" class="sectionIntro hidden" data-i18n="poemModeHelp"></p>
+        <div id="sameLanguageWarning" class="notice warning hidden" data-i18n="sameLanguageWarning"></div>
+        <div id="fictionalLanguageNotice" class="notice info hidden" data-i18n="fictionalLanguageGeminiOnly"></div>
+        <div id="ignoreLanguagesBlock" class="ignoreLanguagesBlock">
+          <div><strong data-i18n="ignoredLanguagesLabel"></strong><p data-i18n="ignoredLanguagesHelp"></p></div>
+          <div class="languageAdder">
+            <select id="ignoredLanguageCategory" class="categorySelect"></select>
+            <select id="ignoredLanguageSelect"></select>
+            <button id="addIgnoredLanguageBtn" type="button" class="secondary small" data-i18n="addLanguage"></button>
+          </div>
+          <div id="ignoredLanguageChips" class="languageChips"></div>
+        </div>
+        <div id="skipUnknownRow" class="settingRow compact">
+          <div><strong data-i18n="skipUnknownLabel"></strong><p data-i18n="skipUnknownHelp"></p></div>
+          <label class="switch"><input id="skipUnknown" type="checkbox"><span></span></label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="apiSection"></h2>
+        <p class="sectionIntro" data-i18n="apiSecurityNote"></p>
+        <div class="secretBlock">
+          <label><span>Gemini API Key</span><div class="secretRow"><input id="geminiApiKey" type="password" autocomplete="off"><button type="button" class="secondary small reveal" data-target="geminiApiKey" data-i18n="show"></button></div></label>
+          <p data-i18n="geminiApiHelp"></p>
+        </div>
+        <div class="secretBlock">
+          <label><span>DeepL API Key</span><div class="secretRow"><input id="deepLApiKey" type="password" autocomplete="off"><button type="button" class="secondary small reveal" data-target="deepLApiKey" data-i18n="show"></button></div></label>
+          <div class="inlineField"><span data-i18n="deepLPlanLabel"></span><select id="deepLPlan"><option value="developer">Developer</option><option value="growth">Growth</option></select></div>
+          <p data-i18n="deepLApiHelp"></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="advancedSection"></h2>
+        <p class="sectionIntro" data-i18n="advancedSectionIntro"></p>
+        <div class="settingRow">
+          <div><strong data-i18n="fallbackEnabledLabel"></strong><p data-i18n="fallbackEnabledHelp"></p></div>
+          <label class="switch"><input id="fallbackEnabled" type="checkbox"><span></span></label>
+        </div>
+        <div class="modelField">
+          <label><span data-i18n="geminiModelLabel"></span><select id="geminiModel"></select></label>
+          <div class="modelActions">
+            <button id="refreshGeminiModelsBtn" type="button" class="secondary small" data-i18n="refreshGeminiModels"></button>
+            <span id="geminiCatalogMeta" class="modelCatalogMeta"></span>
+          </div>
+          <p data-i18n="geminiModelHelp"></p>
+          <div id="geminiModelStatus" class="modelStatus hidden"></div>
+        </div>
+
+        <div id="geminiPromptBlock" class="promptBlock">
+          <div class="promptHeader">
+            <span class="promptLabel" data-i18n="customPromptLabel"></span>
+            <button id="resetPromptBtn" type="button" class="secondary small" data-i18n="resetPrompt"></button>
+          </div>
+          <p class="promptHint promptUsage" data-i18n="customPromptUsageHelp"></p>
+          <textarea id="geminiCustomPrompt" rows="7" spellcheck="false"></textarea>
+          <p class="promptHint" data-i18n="customPromptPlaceholders"></p>
+        </div>
+        <div class="settingRow compact promptSetting">
+          <div><strong data-i18n="promptPlacementLabel"></strong><p data-i18n="promptPlacementHelp"></p></div>
+          <select id="geminiPromptPlacement" class="compactSelect">
+            <option value="system" data-i18n="promptPlacementSystem"></option>
+            <option value="user" data-i18n="promptPlacementUser"></option>
+          </select>
+        </div>
+        <div class="settingRow compact promptSetting">
+          <div><strong data-i18n="minimalThinkingLabel"></strong><p data-i18n="minimalThinkingHelp"></p></div>
+          <label class="switch"><input id="geminiMinimalThinking" type="checkbox"><span></span></label>
+        </div>
+        <div class="settingRow compact promptSetting">
+          <div><strong data-i18n="compactHoverPromptLabel"></strong><p data-i18n="compactHoverPromptHelp"></p></div>
+          <label class="switch"><input id="geminiCompactHoverPrompt" type="checkbox"><span></span></label>
+        </div>
+        <p class="optimizationNote" data-i18n="geminiOptimizationNote"></p>
+      </section>
+
+      <section class="card usageCard">
+        <div class="usageHeader">
+          <div>
+            <h2 data-i18n="usageStatsSection"></h2>
+            <p class="sectionIntro" data-i18n="usageStatsHelp"></p>
+          </div>
+          <button id="resetUsageStatsBtn" type="button" class="secondary small" data-i18n="resetUsageStats"></button>
+        </div>
+        <div class="usageGrid">
+          <div class="usageProvider">
+            <strong>Gemini</strong>
+            <div class="usageMetric"><span data-i18n="usageRequests"></span><b id="usageGeminiRequests">0</b></div>
+            <div class="usageMetric"><span data-i18n="usageInputTokens"></span><b id="usageGeminiPromptTokens">0</b></div>
+            <div class="usageMetric"><span data-i18n="usageOutputTokens"></span><b id="usageGeminiOutputTokens">0</b></div>
+            <div class="usageMetric"><span data-i18n="usageThinkingTokens"></span><b id="usageGeminiThinkingTokens">0</b></div>
+            <div class="usageMetric total"><span data-i18n="usageTotalTokens"></span><b id="usageGeminiTotalTokens">0</b></div>
+          </div>
+          <div class="usageProvider">
+            <strong>DeepL</strong>
+            <div class="usageMetric"><span data-i18n="usageRequests"></span><b id="usageDeepLRequests">0</b></div>
+            <div class="usageMetric total"><span data-i18n="usageCharactersSent"></span><b id="usageDeepLCharacters">0</b></div>
+          </div>
+          <div class="usageProvider">
+            <strong>Google Translate</strong>
+            <div class="usageMetric total"><span data-i18n="usageRequests"></span><b id="usageGoogleRequests">0</b></div>
+          </div>
+        </div>
+        <p id="usageSince" class="usageSince"></p>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="shortcutSection"></h2>
+        <div class="shortcutBox">
+          <div><strong data-i18n="toggleShortcut"></strong><p><span id="shortcutValue">—</span></p></div>
+          <button id="shortcutBtn" class="secondary" data-i18n="changeShortcut"></button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="maintenanceSection"></h2>
+        <button id="clearCacheBtn" class="secondary" data-i18n="clearCache"></button>
+      </section>
+
+      <section class="card about">
+        <h2 data-i18n="aboutSection"></h2>
+        <p><strong data-i18n="versionLabel"></strong> <span id="version"></span></p>
+        <p data-i18n="aboutText"></p>
+        <div class="aboutMeta">
+          <p><strong data-i18n="authorLabel"></strong> Arkadiusz Pajda</p>
+          <p><strong data-i18n="contactLabel"></strong> <a href="mailto:arkadiusz.pajda.97@onet.pl">arkadiusz.pajda.97@onet.pl</a></p>
+          <p><strong data-i18n="licenseLabel"></strong> <span data-i18n="mitLicense"></span></p>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="shared.js"></script>
+  <script src="i18n.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

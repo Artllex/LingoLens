@@ -1,0 +1,8 @@
+{
+  "name": "lingolens",
+  "version": "1.12.2",
+  "description": "A privacy-conscious Firefox extension for in-page translation, explanation, language analysis, proofreading, and text transformation across 484 languages, varieties, and formal systems.",
+  "license": "MIT",
+  "author": "Arkadiusz Pajda",
+  "private": true
+}

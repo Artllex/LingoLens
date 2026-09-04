@@ -1,0 +1,93 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "1.12.2",
+  "default_locale": "en",
+  "permissions": [
+    "storage",
+    "tabs",
+    "menus",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*",
+    "https://translate.google.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://api-free.deepl.com/*",
+    "https://api.deepl.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "shared.js",
+      "i18n.js",
+      "background.js"
+    ]
+  },
+  "action": {
+    "default_area": "navbar",
+    "default_title": "__MSG_extensionName__",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "96": "icons/icon96.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "64": "icons/icon64.png",
+    "96": "icons/icon96.png",
+    "128": "icons/icon128.png",
+    "256": "icons/icon256.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "exclude_matches": [
+        "https://translate.google.com/*",
+        "https://api-free.deepl.com/*",
+        "https://api.deepl.com/*",
+        "https://generativelanguage.googleapis.com/*"
+      ],
+      "js": [
+        "shared.js",
+        "i18n.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "copy-current-result": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "__MSG_copyShortcutDescription__"
+    },
+    "toggle-hover": {
+      "suggested_key": {
+        "default": "Alt+Shift+H"
+      },
+      "description": "__MSG_hoverShortcutDescription__"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hover-translator@local",
+      "strict_min_version": "140.0"
+    }
+  },
+  "author": "Arkadiusz Pajda"
+}
