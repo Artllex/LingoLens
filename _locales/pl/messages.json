@@ -1,0 +1,283 @@
+{
+  "extensionName": {
+    "message": "LingoLens"
+  },
+  "extensionDescription": {
+    "message": "Tłumacz, wyjaśniaj, analizuj i sprawdzaj tekst na stronach w 484 językach, odmianach i systemach formalnych."
+  },
+  "toggleShortcutDescription": {
+    "message": "Włącz lub wyłącz LingoLens"
+  },
+  "copyShortcutDescription": { "message": "Kopiuj aktualnie widoczny wynik LingoLens" },
+  "hoverShortcutDescription": { "message": "Włącz lub wyłącz tłumaczenie po najechaniu" },
+  "enabledState": {
+    "message": "Tłumaczenie jest włączone"
+  },
+  "disabledState": {
+    "message": "Tłumaczenie jest wyłączone"
+  },
+  "engineLabel": {
+    "message": "Silnik tłumaczenia"
+  },
+  "engineGemini": {
+    "message": "Gemini"
+  },
+  "engineGoogle": {
+    "message": "Google Translate"
+  },
+  "engineDeepL": {
+    "message": "DeepL"
+  },
+  "sourceLanguage": {
+    "message": "Język źródłowy"
+  },
+  "targetLanguage": {
+    "message": "Tłumacz na"
+  },
+  "autoDetect": {
+    "message": "Wykrywaj automatycznie"
+  },
+  "sameLanguageWarning": {
+    "message": "Język źródłowy i docelowy są takie same. Tłumaczenie zostanie pominięte."
+  },
+  "geminiKeyMissingFallback": {
+    "message": "Brak klucza Gemini API — jako fallback zostanie użyty Google Translate."
+  },
+  "geminiKeyMissingNoFallback": {
+    "message": "Brak klucza Gemini API. Fallback jest wyłączony, więc tłumaczenie Gemini nie zadziała."
+  },
+  "deepLKeyMissingFallback": {
+    "message": "Brak klucza DeepL API — jako fallback zostanie użyty Google Translate."
+  },
+  "deepLKeyMissingNoFallback": {
+    "message": "Brak klucza DeepL API. Fallback jest wyłączony, więc tłumaczenie DeepL nie zadziała."
+  },
+  "shortcutLabel": {
+    "message": "Skrót włącz/wyłącz"
+  },
+  "changeShortcut": {
+    "message": "Zmień"
+  },
+  "openSettings": {
+    "message": "Ustawienia"
+  },
+  "notSet": {
+    "message": "Nie ustawiono"
+  },
+  "settingsSubtitle": {
+    "message": "Tłumaczenie, epoki języków historycznych, języki, klucze API i zachowanie"
+  },
+  "resetDefaults": {
+    "message": "Przywróć"
+  },
+  "saveSettings": {
+    "message": "Zapisz"
+  },
+  "generalSection": {
+    "message": "Ogólne"
+  },
+  "enabledLabel": {
+    "message": "Włącz translator"
+  },
+  "enabledHelp": {
+    "message": "Skrót klawiszowy i przełącznik na pasku sterują tym ustawieniem globalnie."
+  },
+  "hoverEnabled": {
+    "message": "Tłumacz po najechaniu"
+  },
+  "hoverEnabledHelp": {
+    "message": "Tłumaczy blok tekstu bezpośrednio pod kursorem po krótkim opóźnieniu."
+  },
+  "selectionEnabled": {
+    "message": "Tłumacz zaznaczony tekst"
+  },
+  "selectionEnabledHelp": {
+    "message": "Tłumaczy cały zaznaczony fragment z zachowaniem akapitów i podziałów linii. Zaznaczenie całej strony jest ignorowane — do tłumaczenia strony użyj menu PPM."
+  },
+  "translationSection": {
+    "message": "Tłumaczenie"
+  },
+  "skipEnglishLabel": {
+    "message": "Nigdy nie tłumacz tekstu angielskiego"
+  },
+  "skipEnglishHelp": {
+    "message": "Zachowuje dotychczasowe zachowanie: angielski jest ignorowany nawet przy innym języku docelowym."
+  },
+  "skipUnknownLabel": {
+    "message": "Pomijaj nieznany język źródłowy"
+  },
+  "skipUnknownHelp": {
+    "message": "Jeśli lokalne wykrywanie języka nie jest pewne, tekst nie jest wysyłany do usługi tłumaczącej."
+  },
+  "apiSection": {
+    "message": "Klucze API"
+  },
+  "apiSecurityNote": {
+    "message": "Klucze są zapisywane lokalnie w pamięci rozszerzenia Firefoxa. Nie są szyfrowane jak hasła."
+  },
+  "geminiApiHelp": {
+    "message": "Wymagany dla Gemini. Jeśli Gemini zawiedzie i fallback jest włączony, LingoLens użyje Google Translate."
+  },
+  "deepLPlanLabel": {
+    "message": "Plan DeepL API"
+  },
+  "deepLApiHelp": {
+    "message": "Wymagany dla DeepL. Jeśli DeepL zawiedzie i fallback jest włączony, LingoLens użyje Google Translate. Developer używa api-free.deepl.com, a Growth api.deepl.com."
+  },
+  "show": {
+    "message": "Pokaż"
+  },
+  "hide": {
+    "message": "Ukryj"
+  },
+  "shortcutSection": {
+    "message": "Skrót klawiszowy"
+  },
+  "toggleShortcut": {
+    "message": "Włącz / wyłącz tłumaczenie"
+  },
+  "maintenanceSection": {
+    "message": "Konserwacja"
+  },
+  "clearCache": {
+    "message": "Wyczyść cache tłumaczeń w otwartych kartach"
+  },
+  "aboutSection": {
+    "message": "O rozszerzeniu"
+  },
+  "versionLabel": {
+    "message": "Wersja:"
+  },
+  "aboutText": {
+    "message": "LingoLens tłumaczy tekst pod kursorem i zaznaczone fragmenty, w tym języki historyczne i starożytne z kontrolą epoki."
+  },
+  "settingsSaved": {
+    "message": "Ustawienia zapisane."
+  },
+  "resetConfirm": {
+    "message": "Przywrócić wszystkie ustawienia domyślne? Klucze API Gemini i DeepL zostaną zachowane."
+  },
+  "defaultsRestored": {
+    "message": "Przywrócono ustawienia domyślne."
+  },
+  "cacheCleared": {
+    "message": "Cache tłumaczeń został wyczyszczony."
+  },
+  "translating": {
+    "message": "Tłumaczę…"
+  },
+  "unknownLanguage": {
+    "message": "Nieznany"
+  },
+  "detectedLanguageLabel": {
+    "message": "Wykryto"
+  },
+  "sourceLanguageLabel": {
+    "message": "Źródło"
+  },
+  "translationTimeLabel": {
+    "message": "tłumaczenie"
+  },
+  "translatorEnabledToast": {
+    "message": "LingoLens włączony"
+  },
+  "translatorDisabledToast": {
+    "message": "LingoLens wyłączony"
+  },
+  "geminiModelLabel": {
+    "message": "Model Gemini"
+  },
+  "geminiModelHelp": {
+    "message": "Używany po wybraniu Gemini. Gemini 3.5 Flash-Lite jest zalecanym i najszybszym przetestowanym modelem."
+  },
+  "authorLabel": {
+    "message": "Autor:"
+  },
+  "contactLabel": {
+    "message": "Kontakt:"
+  },
+  "licenseLabel": {
+    "message": "Licencja:"
+  },
+  "mitLicense": {
+    "message": "Licencja MIT"
+  },
+  "uiLanguageLabel": {
+    "message": "Język interfejsu"
+  },
+  "uiLanguageHelp": {
+    "message": "Wybierz język panelu LingoLens, ustawień i komunikatów wyświetlanych na stronach. Przy pierwszym uruchomieniu polski Firefox wybiera polski, a każdy inny język Firefoxa — angielski."
+  },
+  "uiLanguagePolish": {
+    "message": "Polski"
+  },
+  "uiLanguageEnglish": {
+    "message": "Angielski"
+  },
+  "advancedSection": {
+    "message": "Ustawienia rozszerzone"
+  },
+  "advancedSectionIntro": {
+    "message": "Opcje dla użytkowników, którzy chcą mieć większą kontrolę nad zapleczem tłumaczenia."
+  },
+  "fallbackEnabledLabel": {
+    "message": "Fallback do Google Translate"
+  },
+  "fallbackEnabledHelp": {
+    "message": "Gdy Gemini lub DeepL zawiedzie, automatycznie ponów tłumaczenie przez Google Translate. Wyłącz tę opcję, aby LingoLens nigdy sam nie zmieniał dostawcy tłumaczenia."
+  },
+  "fallbackLabel": {
+    "message": "Fallback"
+  },
+  "fallbackReasonLabel": {
+    "message": "powód"
+  },
+  "fallbackReason_missing_api_key": {
+    "message": "brak klucza API"
+  },
+  "fallbackReason_timeout": {
+    "message": "przekroczono limit czasu żądania"
+  },
+  "fallbackReason_slow_response": {
+    "message": "Gemini odpowiadało zbyt wolno"
+  },
+  "fallbackReason_authentication": {
+    "message": "błąd uwierzytelnienia API"
+  },
+  "fallbackReason_rate_limit": {
+    "message": "osiągnięto limit zapytań API"
+  },
+  "fallbackReason_quota_exceeded": {
+    "message": "wyczerpano limit API"
+  },
+  "fallbackReason_content_blocked": {
+    "message": "treść została zablokowana przez dostawcę"
+  },
+  "fallbackReason_unsupported_language": {
+    "message": "wybrany silnik nie obsługuje tego języka"
+  },
+  "fallbackReason_validation_failed": {
+    "message": "wynik nie przeszedł walidacji tłumaczenia"
+  },
+  "fallbackReason_unchanged_output": {
+    "message": "silnik zwrócił niezmieniony tekst źródłowy"
+  },
+  "fallbackReason_empty_response": {
+    "message": "silnik zwrócił pustą odpowiedź"
+  },
+  "fallbackReason_network_error": {
+    "message": "błąd sieci"
+  },
+  "fallbackReason_service_unavailable": {
+    "message": "usługa tłumacząca jest chwilowo niedostępna"
+  },
+  "fallbackReason_provider_error": {
+    "message": "silnik tłumaczenia zwrócił błąd"
+  },
+  "contextMenuTranslatePage": {
+    "message": "Przetłumacz stronę"
+  },
+  "languageGroupRegional": {
+    "message": "Języki regionalne i dialekty"
+  }
+}
