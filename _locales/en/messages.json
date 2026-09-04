@@ -1,0 +1,283 @@
+{
+  "extensionName": {
+    "message": "LingoLens"
+  },
+  "extensionDescription": {
+    "message": "Translate, explain, analyze and proofread text on any webpage across 484 languages, varieties and formal systems."
+  },
+  "toggleShortcutDescription": {
+    "message": "Enable or disable LingoLens"
+  },
+  "copyShortcutDescription": { "message": "Copy the currently displayed LingoLens result" },
+  "hoverShortcutDescription": { "message": "Enable or disable hover translation" },
+  "enabledState": {
+    "message": "Translation is enabled"
+  },
+  "disabledState": {
+    "message": "Translation is disabled"
+  },
+  "engineLabel": {
+    "message": "Translation engine"
+  },
+  "engineGemini": {
+    "message": "Gemini"
+  },
+  "engineGoogle": {
+    "message": "Google Translate"
+  },
+  "engineDeepL": {
+    "message": "DeepL"
+  },
+  "sourceLanguage": {
+    "message": "Source"
+  },
+  "targetLanguage": {
+    "message": "Translate to"
+  },
+  "autoDetect": {
+    "message": "Detect automatically"
+  },
+  "sameLanguageWarning": {
+    "message": "Source and target are the same. Translation will be skipped."
+  },
+  "geminiKeyMissingFallback": {
+    "message": "Gemini API key is missing — Google Translate will be used as fallback."
+  },
+  "geminiKeyMissingNoFallback": {
+    "message": "Gemini API key is missing. Fallback is disabled, so Gemini translation will fail."
+  },
+  "deepLKeyMissingFallback": {
+    "message": "DeepL API key is missing — Google Translate will be used as fallback."
+  },
+  "deepLKeyMissingNoFallback": {
+    "message": "DeepL API key is missing. Fallback is disabled, so DeepL translation will fail."
+  },
+  "shortcutLabel": {
+    "message": "Toggle shortcut"
+  },
+  "changeShortcut": {
+    "message": "Change"
+  },
+  "openSettings": {
+    "message": "Settings"
+  },
+  "notSet": {
+    "message": "Not set"
+  },
+  "settingsSubtitle": {
+    "message": "Translation, historical language periods, languages, API keys and behavior"
+  },
+  "resetDefaults": {
+    "message": "Reset"
+  },
+  "saveSettings": {
+    "message": "Save"
+  },
+  "generalSection": {
+    "message": "General"
+  },
+  "enabledLabel": {
+    "message": "Enable translator"
+  },
+  "enabledHelp": {
+    "message": "The keyboard shortcut and toolbar switch control this setting globally."
+  },
+  "hoverEnabled": {
+    "message": "Translate on hover"
+  },
+  "hoverEnabledHelp": {
+    "message": "Translate the text block directly under the pointer after a short delay."
+  },
+  "selectionEnabled": {
+    "message": "Translate selected text"
+  },
+  "selectionEnabledHelp": {
+    "message": "Translate the full selected fragment, preserving paragraph and line breaks. Whole-page selections are ignored; use the context menu for full-page translation."
+  },
+  "translationSection": {
+    "message": "Translation"
+  },
+  "skipEnglishLabel": {
+    "message": "Never translate English source text"
+  },
+  "skipEnglishHelp": {
+    "message": "Keeps the original behavior: English is ignored even when the target is another language."
+  },
+  "skipUnknownLabel": {
+    "message": "Skip unknown source language"
+  },
+  "skipUnknownHelp": {
+    "message": "If local language detection is not confident, do not send the text to a translation service."
+  },
+  "apiSection": {
+    "message": "API keys"
+  },
+  "apiSecurityNote": {
+    "message": "Keys are stored locally in Firefox extension storage. They are not encrypted like passwords."
+  },
+  "geminiApiHelp": {
+    "message": "Required for Gemini. If Gemini fails and fallback is enabled, LingoLens uses Google Translate."
+  },
+  "deepLPlanLabel": {
+    "message": "DeepL API plan"
+  },
+  "deepLApiHelp": {
+    "message": "Required for DeepL. If DeepL fails and fallback is enabled, LingoLens uses Google Translate. Developer uses api-free.deepl.com; Growth uses api.deepl.com."
+  },
+  "show": {
+    "message": "Show"
+  },
+  "hide": {
+    "message": "Hide"
+  },
+  "shortcutSection": {
+    "message": "Keyboard shortcut"
+  },
+  "toggleShortcut": {
+    "message": "Enable / disable translation"
+  },
+  "maintenanceSection": {
+    "message": "Maintenance"
+  },
+  "clearCache": {
+    "message": "Clear translation cache in open tabs"
+  },
+  "aboutSection": {
+    "message": "About"
+  },
+  "versionLabel": {
+    "message": "Version:"
+  },
+  "aboutText": {
+    "message": "LingoLens translates text under the pointer and selected fragments, including period-aware historical and ancient languages."
+  },
+  "settingsSaved": {
+    "message": "Settings saved."
+  },
+  "resetConfirm": {
+    "message": "Restore all default settings? Gemini and DeepL API keys will be preserved."
+  },
+  "defaultsRestored": {
+    "message": "Defaults restored."
+  },
+  "cacheCleared": {
+    "message": "Translation cache cleared."
+  },
+  "translating": {
+    "message": "Translating…"
+  },
+  "unknownLanguage": {
+    "message": "Unknown"
+  },
+  "detectedLanguageLabel": {
+    "message": "Detected"
+  },
+  "sourceLanguageLabel": {
+    "message": "Source"
+  },
+  "translationTimeLabel": {
+    "message": "translation"
+  },
+  "translatorEnabledToast": {
+    "message": "LingoLens enabled"
+  },
+  "translatorDisabledToast": {
+    "message": "LingoLens disabled"
+  },
+  "geminiModelLabel": {
+    "message": "Gemini model"
+  },
+  "geminiModelHelp": {
+    "message": "Used when Gemini is selected. Gemini 3.5 Flash-Lite is the recommended and fastest tested model."
+  },
+  "authorLabel": {
+    "message": "Author:"
+  },
+  "contactLabel": {
+    "message": "Contact:"
+  },
+  "licenseLabel": {
+    "message": "License:"
+  },
+  "mitLicense": {
+    "message": "MIT License"
+  },
+  "uiLanguageLabel": {
+    "message": "Interface language"
+  },
+  "uiLanguageHelp": {
+    "message": "Choose the language used in the LingoLens popup, settings and on-page messages. On first run, Polish Firefox selects Polish; every other Firefox language selects English."
+  },
+  "uiLanguagePolish": {
+    "message": "Polish"
+  },
+  "uiLanguageEnglish": {
+    "message": "English"
+  },
+  "advancedSection": {
+    "message": "Advanced settings"
+  },
+  "advancedSectionIntro": {
+    "message": "Settings intended for users who want more control over the translation backend."
+  },
+  "fallbackEnabledLabel": {
+    "message": "Fallback to Google Translate"
+  },
+  "fallbackEnabledHelp": {
+    "message": "When Gemini or DeepL fails, automatically retry with Google Translate. Disable this to prevent LingoLens from switching translation providers."
+  },
+  "fallbackLabel": {
+    "message": "Fallback"
+  },
+  "fallbackReasonLabel": {
+    "message": "reason"
+  },
+  "fallbackReason_missing_api_key": {
+    "message": "API key is missing"
+  },
+  "fallbackReason_timeout": {
+    "message": "request timed out"
+  },
+  "fallbackReason_slow_response": {
+    "message": "Gemini response was too slow"
+  },
+  "fallbackReason_authentication": {
+    "message": "API authentication failed"
+  },
+  "fallbackReason_rate_limit": {
+    "message": "API rate limit reached"
+  },
+  "fallbackReason_quota_exceeded": {
+    "message": "API quota exceeded"
+  },
+  "fallbackReason_content_blocked": {
+    "message": "content was blocked by the provider"
+  },
+  "fallbackReason_unsupported_language": {
+    "message": "language is not supported by the selected provider"
+  },
+  "fallbackReason_validation_failed": {
+    "message": "provider output failed translation validation"
+  },
+  "fallbackReason_unchanged_output": {
+    "message": "provider returned the source text unchanged"
+  },
+  "fallbackReason_empty_response": {
+    "message": "provider returned an empty response"
+  },
+  "fallbackReason_network_error": {
+    "message": "network error"
+  },
+  "fallbackReason_service_unavailable": {
+    "message": "translation service is temporarily unavailable"
+  },
+  "fallbackReason_provider_error": {
+    "message": "translation provider returned an error"
+  },
+  "contextMenuTranslatePage": {
+    "message": "Translate page"
+  },
+  "languageGroupRegional": {
+    "message": "Regional languages & dialects"
+  }
+}
